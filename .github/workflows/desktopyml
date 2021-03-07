@@ -48,10 +48,8 @@ jobs:
     - name: Build file_selector implementations debug	
       run: |	
         flutter packages get
-        flutter build -v ${{matrix.TARGET}} --debug	
-      working-directory: ${{ github.workspace }}/fde/plugins/file_selector/example	
+        flutter build -v ${{matrix.TARGET}} --debug		
     - name: Build file_selector implementations release	
       run: |	
         flutter packages get	
         flutter build -v ${{matrix.TARGET}} --release	
-      working-directory: ${{ github.workspace }}/fde/plugins/file_selector/example
