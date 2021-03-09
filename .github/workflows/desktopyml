@@ -58,8 +58,6 @@ jobs:
       with:
         flutter-version: '10.0.19042.804' 
         channel: 'stable'
-    - run: flutter config --enable-web
-    - run: flutter config --enable-desktop
     - run: flutter pub get
     - run: flutter build windows --release 
     - name: Create a Release in GitHub
