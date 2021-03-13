@@ -2,13 +2,13 @@ library flipper_models;
 
 class LoginResponse {
   LoginResponse({
-    this.token,
-    this.email,
-    this.synced,
-    this.name,
-    this.newUser,
+    required this.token,
+    required this.email,
+    required this.synced,
+    required this.name,
+    required this.newUser,
     this.avatar,
-    this.id,
+    required this.id,
     this.subscription,
     this.expiresAt,
   });
