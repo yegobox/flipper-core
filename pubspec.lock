@@ -204,6 +204,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  flipper_models:
+    dependency: transitive
+    description:
+      path: "packages/flipper_models"
+      relative: true
+    source: path
+    version: "0.0.1"
   flipper_services:
     dependency: "direct main"
     description:

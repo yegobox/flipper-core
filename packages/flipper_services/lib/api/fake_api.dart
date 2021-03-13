@@ -1,3 +1,4 @@
+import 'package:flipper_models/flipper_login_response.dart';
 import 'package:flipper_services/abstractions/api.dart';
 
 final List<Map<String, String>> mockUnits = [
@@ -92,8 +93,7 @@ class FakeApi implements Api {
   }
 
   @override
-  Future<String> login() {
-    print('we can invoke the login');
+  Future<LoginResponse> login() {
     // TODO: implement login
     throw UnimplementedError();
   }

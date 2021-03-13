@@ -50,13 +50,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  flipper_models:
-    dependency: "direct main"
-    description:
-      path: "../flipper_models"
-      relative: true
-    source: path
-    version: "0.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -67,41 +60,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  get:
-    dependency: transitive
-    description:
-      name: get
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.0-nullsafety.2"
-  get_it:
-    dependency: transitive
-    description:
-      name: get_it
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "6.0.0"
-  http:
-    dependency: "direct main"
-    description:
-      name: http
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.13.0"
-  http_parser:
-    dependency: transitive
-    description:
-      name: http_parser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.0"
-  injectable:
-    dependency: "direct main"
-    description:
-      name: injectable
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0"
   matcher:
     dependency: transitive
     description:
@@ -123,13 +81,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.11.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -149,13 +100,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.10.0"
-  stacked_services:
-    dependency: "direct main"
-    description:
-      name: stacked_services
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.8.0-nullsafety"
   stream_channel:
     dependency: transitive
     description:
@@ -199,5 +143,5 @@ packages:
     source: hosted
     version: "2.1.0"
 sdks:
-  dart: ">=2.12.0 <3.0.0"
+  dart: ">=2.12.0-0.0 <3.0.0"
   flutter: ">=1.17.0"

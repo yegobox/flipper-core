@@ -1,5 +1,6 @@
 // import 'package:flipper/services/abstractions/api.dart';
 
+import 'package:flipper_models/flipper_login_response.dart';
 import 'package:flipper_services/abstractions/api.dart';
 import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
@@ -33,9 +34,8 @@ class HttpApi implements Api {
   }
 
   @override
-  Future<String> login() {
+  Future<LoginResponse> login() {
     // TODO: implement login
-    print('login');
     throw UnimplementedError();
   }
 }
