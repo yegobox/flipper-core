@@ -37,6 +37,9 @@ dependencies:
   injectable: ^1.2.0
   http: ^0.13.0
   get_it: ^6.0.0
+  flipper_services:
+    path:
+      'packages/flipper_services'
 
 dev_dependencies:
   flutter_test:

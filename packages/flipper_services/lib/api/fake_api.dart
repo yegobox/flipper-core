@@ -90,4 +90,11 @@ class FakeApi implements Api {
     await Future.delayed(const Duration(microseconds: 2000));
     return ApiResponse(success: true, data: mockData['payrolls']);
   }
+
+  @override
+  Future<String> login() {
+    print('we can invoke the login');
+    // TODO: implement login
+    throw UnimplementedError();
+  }
 }

@@ -3,4 +3,5 @@ abstract class Api {
 
   // ignore: always_specify_types
   Future? payroll();
+  Future<String> login();
 }

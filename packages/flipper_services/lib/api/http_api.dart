@@ -31,4 +31,11 @@ class HttpApi implements Api {
   Future? payroll() {
     return null;
   }
+
+  @override
+  Future<String> login() {
+    // TODO: implement login
+    print('login');
+    throw UnimplementedError();
+  }
 }
