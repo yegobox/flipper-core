@@ -36,10 +36,13 @@ dependencies:
   stacked_services: ^0.8.0-nullsafety
   injectable: ^1.2.0
   http: ^0.13.0
+  get_it: ^6.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: 
+  injectable_generator:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -83,3 +86,4 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   # flutter run
+  # ./flutterw packages pub run build_runner build --delete-conflicting-outputs
