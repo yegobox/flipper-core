@@ -93,8 +93,21 @@ class FakeApi implements Api {
   }
 
   @override
-  Future<LoginResponse> login() {
-    // TODO: implement login
-    throw UnimplementedError();
+  Future<LoginResponse> httpLogin(String number) async {
+    await Future.delayed(const Duration(microseconds: 2000));
+    return LoginResponse(
+      email: 'richie@gmail.com',
+      id: 1,
+      name: 'Richie',
+      synced: 1,
+      token: 'token',
+      newUser: false,
+    );
+  }
+
+
+  @override
+  Future<void> firebaseAuth(String number) async {
+    await Future.delayed(const Duration(microseconds: 2000));
   }
 }

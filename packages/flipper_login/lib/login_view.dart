@@ -18,7 +18,7 @@ class LoginViewState extends State<LoginView> {
         child: Center(
           child: ElevatedButton(
             onPressed: () {
-              ProxyService.api.login();
+              ProxyService.api.httpLogin("0383");
             },
             child: Text('Log in'),
           ),

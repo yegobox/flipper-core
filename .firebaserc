@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "flipper-dev",
+    "prod": "flipper-dev",
+    "staging": "gallery-staging-flutter-dev"
+  }
+}
