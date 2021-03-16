@@ -3,7 +3,6 @@ library flipper_login;
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flipper/proxy.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);

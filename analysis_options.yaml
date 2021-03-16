@@ -5,7 +5,7 @@ analyzer:
     - lib/l10n/messages_*.dart
   strong-mode:
     implicit-casts: false
-    implicit-dynamic: false
+    implicit-dynamic: true
 
 linter:
   rules:
