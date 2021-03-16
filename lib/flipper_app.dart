@@ -10,7 +10,7 @@ class FlipperApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginView(),
+      home: const LoginView(),
     );
   }
 }
