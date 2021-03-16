@@ -13,8 +13,8 @@ abstract class ThirdPartyServicesModule {
   @lazySingleton
   Api get apiService {
     // ignore: prefer_typing_uninitialized_variables
-    var apiService;
-    const ApiProvider choosenProvider =
+    Api apiService;
+    const choosenProvider =
         ApiProvider.Fake; // change this to change the proider
     switch (choosenProvider) {
       case ApiProvider.Fake:

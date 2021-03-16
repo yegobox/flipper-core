@@ -43,38 +43,6 @@ final List<Map<String, String>> mockUnits = [
   {'name': 'Per Stone (st)', 'value': 'st'},
   {'name': 'Per Yard (yd)', 'value': 'yd'}
 ];
-final Map<String, dynamic> mockData = {
-  // ignore: always_specify_types
-  'payrolls': [
-    // ignore: always_specify_types
-    {
-      'title': 'souce-supplier',
-      'list':
-          // ignore: always_specify_types
-          [
-        // ignore: always_specify_types
-        {
-          'name': 'Richie',
-          'phone': '+250783054874',
-          'last-payment': '12/30/30',
-          'total_paid': 230303,
-          'type': 'recurring',
-          'next_pay':
-              null //| can be a date to show when a next payment will be made.
-        },
-        {
-          'name': 'Richie',
-          'phone': '+250783054874',
-          'last-payment': '12/30/30',
-          'total_paid': 230303,
-          'type': 'recurring',
-          'next_pay':
-              null //| can be a date to show when a next payment will be made.
-        }
-      ]
-    },
-  ]
-};
 
 class ApiResponse {
   final bool success;
@@ -89,22 +57,14 @@ class FakeApi implements Api {
   Future payroll() async {
     // ignore: always_specify_types
     await Future.delayed(const Duration(microseconds: 2000));
-    return ApiResponse(success: true, data: mockData['payrolls']);
+    // return ApiResponse(success: true, data: mockData['payrolls']);
   }
 
   @override
   Future<LoginResponse> httpLogin(String number) async {
     await Future.delayed(const Duration(microseconds: 2000));
-    return LoginResponse(
-      email: 'richie@gmail.com',
-      id: 1,
-      name: 'Richie',
-      synced: 1,
-      token: 'token',
-      newUser: false,
-    );
+    return LoginResponse();
   }
-
 
   @override
   Future<void> firebaseAuth(String number) async {
