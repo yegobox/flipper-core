@@ -1,10 +1,10 @@
-name: flipper_login
+name: flipper_services
 description: A new Flutter package project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
 version: 0.0.1
 author:
 homepage:
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -13,12 +13,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  universal_platform: 1.0.0-nullsafety
-  flipper_services:
+  stacked_services: ^0.8.0-nullsafety
+  injectable: ^1.2.0
+  http: ^0.13.0
+  flipper_models:
     path:
-      '../flipper_services'
-  flipper:
-    path: ../../
+      '../flipper_models'
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -2,12 +2,12 @@ library flipper_button;
 
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class ButtonView extends StatelessWidget {
   final String text;
   final Color textColor;
   final Color buttonColor;
   final VoidCallback onPress;
-  Button(this.text, this.onPress, this.textColor, this.buttonColor);
+  ButtonView(this.text, this.onPress, this.textColor, this.buttonColor);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,7 +21,10 @@ class Button extends StatelessWidget {
             style: TextStyle(color: textColor),
           ),
           color: buttonColor,
-          padding: EdgeInsets.all(20),
+          padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+          shape: RoundedRectangleBorder(
+            borderRadius: new BorderRadius.circular(10.0),
+          ),
         ),
       ),
     );

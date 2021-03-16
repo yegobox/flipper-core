@@ -2,7 +2,7 @@ library flipper_logo;
 
 import 'package:flutter/material.dart';
 
-class Logo extends StatelessWidget {
+class LogoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

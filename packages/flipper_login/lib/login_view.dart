@@ -4,11 +4,11 @@ import 'dart:developer';
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:universal_platform/universal_platform.dart';
+import 'package:flipper/proxy.dart';
 
 import './button_view.dart';
-import './logo_view.dart';
-import './text_view.dart';
+import './login_popup_view.dart';
+import './top_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -21,43 +21,29 @@ class LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+          TopView(),
           Expanded(
             child: Container(
-              color: Colors.purpleAccent[400],
-              child: SafeArea(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Logo(),
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      child: TextView('Flipper', 32),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      child: TextView('Interact and grow your business', 24),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.all(40),
+              margin: EdgeInsets.fromLTRB(10, 40, 10, 40),
               child: Column(
                 children: <Widget>[
-                  Button(
+                  ButtonView(
                     'Create Account',
-                    () => {print('Create account clicked')},
+                    () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) => LoginPopupView(),
+                      );
+                    },
                     Colors.white,
                     Colors.blue,
                   ),
-                  Button(
+                  ButtonView(
                     'Sign In',
                     () => {print('Sign In clicked')},
                     Colors.blue,
@@ -71,4 +57,6 @@ class LoginViewState extends State<LoginView> {
       ),
     );
   }
+
+  void onPressed() {}
 }
