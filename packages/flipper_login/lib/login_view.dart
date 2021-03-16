@@ -4,6 +4,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import './login_popup_view.dart';
+
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);
 
@@ -65,7 +67,12 @@ class LoginViewState extends State<LoginView> {
                       'Create Account',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => LoginPopupView(),
+                      );
+                    },
                   ),
                 ),
                 SizedBox(
@@ -79,7 +86,12 @@ class LoginViewState extends State<LoginView> {
                       'Sign In',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => LoginPopupView(),
+                      );
+                    },
                   ),
                 )
               ]),
