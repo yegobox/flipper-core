@@ -30,13 +30,7 @@ class HttpApi implements Api {
   ExtendedClient client = ExtendedClient(http.Client());
 
   @override
-  // ignore: always_specify_types
-  Future? payroll() {
-    return null;
-  }
-
-  @override
-  Future<LoginResponse> httpLogin(String number) {
+  Future<LoginResponse> webDesktopLogin({String? number}) {
     // TODO: implement login
     throw UnimplementedError();
   }

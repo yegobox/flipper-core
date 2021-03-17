@@ -1,5 +1,6 @@
 library flipper_login_popup;
 
+import 'package:flipper/proxy.dart';
 import 'package:flutter/material.dart';
 
 import './button_view.dart';
@@ -82,7 +83,8 @@ class LoginPopupView extends StatelessWidget {
               child: ButtonView(
                 'Verify',
                 () {
-                  Navigator.of(context).pop();
+                  // Navigator.of(context).pop();
+                  ProxyService.api.webDesktopLogin(number: '78347');
                 },
                 Colors.white,
                 Colors.blue,
