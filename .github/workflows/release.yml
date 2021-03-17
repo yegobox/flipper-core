@@ -1,4 +1,4 @@
-name: Draft Flutter Gallery Release
+name: Draft Flutter Flipper Release
 on:
   push:
     # Sequence of patterns matched against refs/tags
@@ -18,7 +18,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
-        release_name: Flutter Gallery ${{ github.ref }}
+        release_name: Flutter Flipper ${{ github.ref }}
         draft: true
         prerelease: false
   build:
@@ -85,8 +85,8 @@ jobs:
     - name: Run Flutter doctor
       run: flutter doctor -v
 
-    # Clone the Gallery repository under `code`, to avoid conflicts with `flutter`.
-    - name: Clone the Gallery repository
+    # Clone the Flipper repository under `code`, to avoid conflicts with `flutter`.
+    - name: Clone the Flipper repository
       uses: actions/checkout@v2
       with:
         path: 'code'
@@ -117,7 +117,7 @@ jobs:
       working-directory: code/${{ matrix.path }}
     - name: Compress build for macOS
       if: matrix.target == 'macos'
-      run: ditto -c -k --sequesterRsrc --keepParent Flutter\ Gallery.app $GITHUB_WORKSPACE/flipper_${{ matrix.target }}.zip
+      run: ditto -c -k --sequesterRsrc --keepParent Flutter\ Flipper.app $GITHUB_WORKSPACE/flipper_${{ matrix.target }}.zip
       working-directory: code/${{ matrix.path }}
     - name: Compress build for Windows
       if: matrix.target == 'windows'
