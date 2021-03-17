@@ -53,15 +53,7 @@ class ApiResponse {
 
 class FakeApi implements Api {
   @override
-  // ignore: always_specify_types
-  Future payroll() async {
-    // ignore: always_specify_types
-    await Future.delayed(const Duration(microseconds: 2000));
-    // return ApiResponse(success: true, data: mockData['payrolls']);
-  }
-
-  @override
-  Future<LoginResponse> httpLogin(String number) async {
+  Future<LoginResponse> webDesktopLogin({String? number}) async {
     await Future.delayed(const Duration(microseconds: 2000));
     return LoginResponse();
   }

@@ -36,6 +36,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0"
+  auto_route:
+    dependency: "direct main"
+    description:
+      name: auto_route
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
+  auto_route_generator:
+    dependency: "direct dev"
+    description:
+      name: auto_route_generator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   awesome_notifications:
     dependency: transitive
     description:
@@ -316,6 +330,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
+  flipper_dashboard:
+    dependency: "direct main"
+    description:
+      path: "packages/flipper_dashboard"
+      relative: true
+    source: path
+    version: "0.0.1"
   flipper_login:
     dependency: "direct main"
     description:

@@ -1,5 +1,6 @@
 library flipper_login_popup;
 
+import 'package:flipper/proxy.dart';
 import 'package:flutter/material.dart';
 
 import './button_view.dart';
@@ -7,41 +8,43 @@ import './button_view.dart';
 class LoginPopupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
       height: 400.0,
       color: Colors.transparent,
-      child: new Container(
-        padding: EdgeInsets.fromLTRB(10, 40, 10, 10),
-        decoration: new BoxDecoration(
-            color: Colors.white,
-            borderRadius: new BorderRadius.only(
-                topLeft: const Radius.circular(20.0),
-                topRight: const Radius.circular(20.0))),
-        child: new Column(
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+          ),
+        ),
+        child: Column(
           children: <Widget>[
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 40),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
-                      child: Text(
+                      margin: const EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
+                      child: const Text(
                         'Welcome to',
                         style: TextStyle(fontWeight: FontWeight.w900),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
-                      child: Text(
+                      margin: const EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
+                      child: const Text(
                         'Flipper',
                         style: TextStyle(
                             color: Colors.blue, fontWeight: FontWeight.w900),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
-                      child: Text(
+                      margin: const EdgeInsets.fromLTRB(2.5, 0, 2.5, 0),
+                      child: const Text(
                         'app',
                         style: TextStyle(fontWeight: FontWeight.w900),
                       ),
@@ -49,8 +52,8 @@ class LoginPopupView extends StatelessWidget {
                   ]),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 0, 40),
-              child: TextField(
+              margin: const EdgeInsets.fromLTRB(0, 0, 0, 40),
+              child: const TextField(
                 autocorrect: true,
                 decoration: InputDecoration(
                   hintText: '+250789078834',
@@ -70,7 +73,7 @@ class LoginPopupView extends StatelessWidget {
               ),
             ),
             Container(
-              child: Text(
+              child: const Text(
                 'After entering your phone number click verify to authenticate yourself! then wait up to 20seconds to get the OTP and proceed',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.grey),
@@ -80,7 +83,8 @@ class LoginPopupView extends StatelessWidget {
               child: ButtonView(
                 'Verify',
                 () {
-                  Navigator.of(context).pop();
+                  // Navigator.of(context).pop();
+                  ProxyService.api.webDesktopLogin(number: '78347');
                 },
                 Colors.white,
                 Colors.blue,
