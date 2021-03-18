@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "flipper-dev",
-    "prod": "flipper-dev",
-    "staging": "gallery-staging-flutter-dev"
+    "default": "yegobox-2ee43"
   }
 }
