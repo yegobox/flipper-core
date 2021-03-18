@@ -13,7 +13,7 @@
         "destination": "/index.html"
       },
       {
-        "source": "/open/**",
+        "source": "/open",
         "dynamicLinks": true
       }
     ]

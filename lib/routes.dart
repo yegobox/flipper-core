@@ -12,3 +12,5 @@ import 'package:flipper_dashboard/flipper_dashboard.dart';
 class $AppRouter {}
 
 // ./flutterw packages pub run build_runner build --delete-conflicting-outputs
+//  firebase deploy --only hosting
+// ./flutterw build web

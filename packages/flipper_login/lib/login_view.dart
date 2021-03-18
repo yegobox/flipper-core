@@ -35,7 +35,7 @@ class LoginViewState extends State<LoginView> {
                 height: 3,
               ),
               Text(
-                'Flipper',
+                'Flipper22',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 26, color: Colors.blue[900]),
               ),

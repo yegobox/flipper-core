@@ -5,6 +5,34 @@ on:
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 jobs:
+  hosting:
+      name: Deploy Website
+      runs-on: ubuntu-latest
+      steps:
+        # Checkout Repository
+        - uses: actions/checkout@v1
+
+        # Install Flutter command
+        - uses: subosito/flutter-action@v1
+          with:
+            channel: 'dev'
+
+        # Build Website
+        - name: Build Website
+          run: |
+            flutter config --enable-web
+            flutter pub get
+            flutter build web --release
+          working-directory: ./
+
+        # Deploy Firebase Hosting
+        - name: Deploy Firebase Hosting
+          uses: w9jds/firebase-action@master
+          with:
+            args: deploy --only hosting:yegobox-2ee43
+          env:
+            FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+            PROJECT_PATH: ./
   create-release:
     name: Create draft release
     runs-on: ubuntu-20.04
