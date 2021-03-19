@@ -16,7 +16,7 @@ class AppRouter extends _i1.RootStackRouter {
     LoginView.name: (entry) {
       return _i1.MaterialPageX(
           entry: entry,
-          child: const _i2.LoginView(),
+          child: _i2.LoginView(),
           maintainState: true,
           fullscreenDialog: false);
     },
