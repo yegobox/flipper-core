@@ -10,7 +10,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Wrap(
           children: [
             const Spacer(flex: 2),
             Image.asset("assets/images/welcome_image.png"),
@@ -35,7 +35,7 @@ class WelcomeScreen extends StatelessWidget {
                     .withOpacity(0.64),
               ),
             ),
-            Spacer(flex: 3),
+            const Spacer(flex: 3),
             FittedBox(
               child: TextButton(
                   onPressed: () => Navigator.push(
