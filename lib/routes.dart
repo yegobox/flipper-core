@@ -1,11 +1,14 @@
 import 'package:auto_route/annotations.dart';
-import 'package:flipper_login/login_view.dart';
+import 'package:flipper_chat/screens/welcome/welcome_screen.dart';
+// import 'package:flipper_login/login_view.dart';
 import 'package:flipper_dashboard/flipper_dashboard.dart';
 
+// im
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(page: LoginView, initial: true),
+    // AutoRoute(page: LoginView, initial: true),
+    AutoRoute(page: WelcomeScreen, initial: true),
     AutoRoute(page: DashboardView),
   ],
 )
