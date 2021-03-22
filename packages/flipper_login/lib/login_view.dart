@@ -16,46 +16,49 @@ class LoginView extends StatefulWidget {
 class LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          color: Colors.blue[100],
-          width: double.infinity,
-          height: 400,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Image.asset(
-                'assets/fliper-logo.png',
-                width: 80,
-                height: 80,
-              ),
-              SizedBox(
-                height: 3,
-              ),
-              Text(
-                'Flipper22',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 26, color: Colors.blue[900]),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'Interact and grow your bussiness',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 18, color: Colors.grey[700]),
-              ),
-            ],
+    return Container(
+      color: Colors.white,
+      width: double.infinity,
+      child: Column(
+        children: <Widget>[
+          Container(
+            color: Colors.blue[100],
+            width: double.infinity,
+            height: 400,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  'assets/fliper-logo.png',
+                  width: 80,
+                  height: 80,
+                ),
+                SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  'Flipper22',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 26, color: Colors.blue[900]),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Interact and grow your bussiness',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 18, color: Colors.grey[700]),
+                ),
+              ],
+            ),
           ),
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
@@ -94,9 +97,11 @@ class LoginViewState extends State<LoginView> {
                     },
                   ),
                 )
-              ]),
-        ),
-      ],
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

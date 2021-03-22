@@ -2,6 +2,7 @@ library flipper_login_popup;
 
 import 'package:flipper/proxy.dart';
 import 'package:flutter/material.dart';
+import 'package:country_code_picker/country_code_picker.dart';
 
 import './button_view.dart';
 
@@ -53,22 +54,27 @@ class LoginPopupView extends StatelessWidget {
             ),
             Container(
               margin: const EdgeInsets.fromLTRB(0, 0, 0, 40),
-              child: const TextField(
-                autocorrect: true,
-                decoration: InputDecoration(
-                  hintText: '+250789078834',
-                  prefixIcon: Icon(Icons.phone),
-                  hintStyle: TextStyle(color: Colors.grey),
-                  filled: true,
-                  fillColor: Colors.white70,
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                    borderSide: BorderSide(color: Colors.blue, width: 2),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    borderSide: BorderSide(color: Colors.green, width: 2),
-                  ),
+              child: Form(
+                child: Row(
+                  children: <Widget>[
+                    CountryCodePicker(
+                      onChanged: null,
+                      initialSelection: 'RW',
+                      favorite: ['+250', 'RW'],
+                      showCountryOnly: false,
+                      showOnlyCountryWhenClosed: false,
+                      alignLeft: false,
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                          hintText: '789078834',
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -83,8 +89,8 @@ class LoginPopupView extends StatelessWidget {
               child: ButtonView(
                 'Verify',
                 () {
-                  // Navigator.of(context).pop();
-                  ProxyService.api.webDesktopLogin(number: '78347');
+                  Navigator.of(context).pop();
+                  //  ProxyService.api.webDesktopLogin(number: '78347');
                 },
                 Colors.white,
                 Colors.blue,
