@@ -55,26 +55,36 @@ class LoginPopupView extends StatelessWidget {
             Container(
               margin: const EdgeInsets.fromLTRB(0, 0, 0, 40),
               child: Form(
-                child: Row(
-                  children: <Widget>[
-                    CountryCodePicker(
-                      onChanged: null,
-                      initialSelection: 'RW',
-                      favorite: ['+250', 'RW'],
-                      showCountryOnly: false,
-                      showOnlyCountryWhenClosed: false,
-                      alignLeft: false,
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1,
                     ),
-                    Expanded(
-                      child: TextFormField(
-                        keyboardType: TextInputType.phone,
-                        decoration: InputDecoration(
-                          hintText: '789078834',
-                          border: OutlineInputBorder(),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      CountryCodePicker(
+                        onChanged: null,
+                        initialSelection: 'RW',
+                        favorite: ['+250', 'RW'],
+                        showCountryOnly: false,
+                        showOnlyCountryWhenClosed: false,
+                        alignLeft: false,
+                      ),
+                      Expanded(
+                        child: TextFormField(
+                          keyboardType: TextInputType.phone,
+                          decoration: InputDecoration(
+                            hintText: '789078834',
+                            border: InputBorder.none,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -90,7 +100,7 @@ class LoginPopupView extends StatelessWidget {
                 'Verify',
                 () {
                   Navigator.of(context).pop();
-                  //  ProxyService.api.webDesktopLogin(number: '78347');
+                  // ProxyService.api.webDesktopLogin(number: '78347');
                 },
                 Colors.white,
                 Colors.blue,
