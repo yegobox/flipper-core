@@ -34,7 +34,11 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+<<<<<<< HEAD
         applicationId "com.example.flipper"
+=======
+        applicationId "rw.flipper"
+>>>>>>> 72342e751b6e197308d93389a69ec5fd57d72a67
         minSdkVersion 24
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
