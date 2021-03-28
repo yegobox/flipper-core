@@ -65,7 +65,7 @@ dependencies:
   get_storage:
   country_picker:
   # pusher_beams: not available for null safe
-  # firebase_analytics: not available
+  firebase_analytics: 
   # flutter_uploader: not available
   rxdart:
   # loading: not available

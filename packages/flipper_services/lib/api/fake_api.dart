@@ -1,4 +1,3 @@
-import 'package:flipper_models/flipper_login_response.dart';
 import 'package:flipper_services/abstractions/api.dart';
 
 final List<Map<String, String>> mockUnits = [
@@ -43,23 +42,52 @@ final List<Map<String, String>> mockUnits = [
   {'name': 'Per Stone (st)', 'value': 'st'},
   {'name': 'Per Yard (yd)', 'value': 'yd'}
 ];
+final Map<String, dynamic> mockData = {
+  // ignore: always_specify_types
+  'payrolls': [
+    // ignore: always_specify_types
+    {
+      'title': 'souce-supplier',
+      'list':
+          // ignore: always_specify_types
+          [
+        // ignore: always_specify_types
+        {
+          'name': 'Richie',
+          'phone': '+250783054874',
+          'last-payment': '12/30/30',
+          'total_paid': 230303,
+          'type': 'recurring',
+          'next_pay':
+              null //| can be a date to show when a next payment will be made.
+        },
+        {
+          'name': 'Richie',
+          'phone': '+250783054874',
+          'last-payment': '12/30/30',
+          'total_paid': 230303,
+          'type': 'recurring',
+          'next_pay':
+              null //| can be a date to show when a next payment will be made.
+        }
+      ]
+    },
+  ]
+};
 
 class ApiResponse {
   final bool success;
   dynamic data;
   // ignore: sort_constructors_first
-  ApiResponse({required this.success, this.data});
+  ApiResponse({this.success, this.data});
 }
 
 class FakeApi implements Api {
   @override
-  Future<LoginResponse> webDesktopLogin({String? number}) async {
+  // ignore: always_specify_types
+  Future payroll() async {
+    // ignore: always_specify_types
     await Future.delayed(const Duration(microseconds: 2000));
-    return LoginResponse();
-  }
-
-  @override
-  Future<void> firebaseAuth(String number) async {
-    await Future.delayed(const Duration(microseconds: 2000));
+    return ApiResponse(success: true, data: mockData['payrolls']);
   }
 }

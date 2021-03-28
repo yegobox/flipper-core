@@ -1,6 +1,8 @@
-import 'package:flipper_models/flipper_login_response.dart';
 
 abstract class Api {
-  Future<LoginResponse> webDesktopLogin({String number});
-  Future<void> firebaseAuth(String number);
+
+  // Home screen futures api calls
+  
+  // ignore: always_specify_types
+  Future payroll();
 }
