@@ -124,7 +124,18 @@ class LoginView extends StatelessWidget {
                       ],
                     ),
                   ),
-                  //Text("Footer Image")
+
+                  //In this section you can add the footer section
+                  Container(
+                    color: Colors.grey[400],
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Container(
+                          child: Center(
+                              child: Text("Footer Image Section"))),
+                    ],
+                  ))
                 ],
               ),
             ),
