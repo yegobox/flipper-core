@@ -94,6 +94,7 @@ dependencies:
   # firebase_dynamic_links: not available
   
   bitsdojo_window: 
+  observable_ish:
 
 dev_dependencies:
   flutter_test:

@@ -4,15 +4,15 @@ import 'package:get_storage/get_storage.dart';
 
 class SharedPreferenceService {
   final box = GetStorage();
-  Future<void> setUserLoggedIn({String userId}) async {
+  Future<void> setUserLoggedIn({String? userId}) async {
     await box.write('userId', userId);
   }
 
-  Future<void> setToken({String token}) async {
+  Future<void> setToken({String? token}) async {
     await box.write('token', token);
   }
 
-  Future<void> setCustomOrderId({String orderId}) async {
+  Future<void> setCustomOrderId({String? orderId}) async {
     await box.write('custom_orderId', orderId);
   }
 
@@ -20,12 +20,12 @@ class SharedPreferenceService {
     return box.read('custom_orderId') ?? 'null';
   }
 
-  bool removeKey({dynamic key}) {
+  bool removeKey({required String key}) {
     box.remove(key);
     return true;
   }
 
-  String getUserId() {
+  dynamic getUserId() {
     return box.read('userId');
   }
 
@@ -34,7 +34,7 @@ class SharedPreferenceService {
     return true;
   }
 
-  Future<void> setIsAppConstantsInitialized({String userId}) async {
+  Future<void> setIsAppConstantsInitialized({String? userId}) async {
     await box.write('isAppConstantsInitialized', true);
   }
 

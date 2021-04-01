@@ -8,13 +8,13 @@ import 'package:flipper_services/locator.dart';
 import 'flipperNavigation_service.dart';
 
 class PushNotificationService {
-  final FirebaseMessaging _fcm = FirebaseMessaging();
+  // final FirebaseMessaging _fcm = FirebaseMessaging();
   final _navigationService = locator<FlipperNavigationService>();
 
   Future initialise() async {
     if (Platform.isIOS) {
       // request permissions if we're on android
-      _fcm.requestNotificationPermissions(const IosNotificationSettings());
+      // _fcm.requestNotificationPermissions(const IosNotificationSettings());
     }
     // _fcm.configure(
     //   // Called when the app is in the foreground and we receive a push notification

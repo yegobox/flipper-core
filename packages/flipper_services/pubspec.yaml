@@ -69,8 +69,8 @@ dependencies:
   provider: 
   cached_network_image: 
   # flutter_dotenv: ^2.1.0
-  mailer: ^3.2.1
-  contacts_service: ^0.4.6
+  mailer: 
+  # contacts_service: 
   # flutter_reactive_ble: ^2.5.3
   # flutter_text_drawable: ^0.3.1
   connectivity: 
@@ -82,7 +82,7 @@ dependencies:
   awesome_notifications: 
   # pusher: ^1.0.0
  
-  couchbase_lite_dart: 
+  # couchbase_lite_dart: 
   path_provider: 
   # flipper_models:
   #   path:
@@ -90,6 +90,7 @@ dependencies:
   # firebase_dynamic_links: ^0.5.0+11
   share: 
   cron: 
+  observable_ish:
   # firebase_remote_config: ^0.6.0
   # pusher_websocket_flutter: ^0.2.0
   # pusher_beams: "^0.5.3+3"

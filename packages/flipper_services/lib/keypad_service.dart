@@ -1,8 +1,8 @@
 library flipper_services;
 
-import 'package:couchbase_lite_dart/couchbase_lite_dart.dart';
-import 'package:flipper_models/order.dart';
-import 'package:flipper_models/variation.dart';
+// import 'package:couchbase_lite_dart/couchbase_lite_dart.dart';
+// import 'package:flipper_models/order.dart';
+// import 'package:flipper_models/variation.dart';
 import 'package:flipper_services/constant.dart';
 import 'package:flipper_services/database_service.dart';
 import 'package:flipper_services/locator.dart';
@@ -40,7 +40,6 @@ class KeyPadService with ReactiveServiceMixin {
   double get amount => cash.value;
 
   final DatabaseService _db = ProxyService.database;
-
 
   /// create new order,this method assume a cashier is still in progress of taking order
   /// then the amount passed assume that we are dealing with custom item
