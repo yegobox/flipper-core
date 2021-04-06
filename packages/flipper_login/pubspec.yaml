@@ -7,16 +7,16 @@ author:
 homepage:
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.17.0 <2.0.0"
+  sdk: '>=2.12.0 <3.0.0'
+  flutter: '>=1.17.0 <2.0.0'
 
 dependencies:
+  country_code_picker: ^2.0.1
   flutter:
     sdk: flutter
   universal_platform: 1.0.0-nullsafety
   flipper_services:
-    path:
-      '../flipper_services'
+    path: '../flipper_services'
   flipper:
     path: ../../
 dev_dependencies:
