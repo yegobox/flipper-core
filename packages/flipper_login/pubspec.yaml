@@ -15,8 +15,8 @@ dependencies:
   flutter:
     sdk: flutter
   universal_platform: 1.0.0-nullsafety
-  flipper_services:
-    path: '../flipper_services'
+  # flipper_services:
+  #   path: '../flipper_services'
   flipper:
     path: ../../
 dev_dependencies:
