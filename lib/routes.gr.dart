@@ -14,27 +14,17 @@ class AppRouter extends _i1.RootStackRouter {
   @override
   final Map<String, _i1.PageFactory> pagesMap = {
     LoginView.name: (entry) {
-      return _i1.MaterialPageX(
-          entry: entry,
-          child: _i2.LoginView(),
-          maintainState: true,
-          fullscreenDialog: false);
+      return _i1.MaterialPageX(entry: entry, child: _i2.LoginView());
     },
     DashboardView.name: (entry) {
-      return _i1.MaterialPageX(
-          entry: entry,
-          child: _i3.DashboardView(),
-          maintainState: true,
-          fullscreenDialog: false);
+      return _i1.MaterialPageX(entry: entry, child: _i3.DashboardView());
     }
   };
 
   @override
   List<_i1.RouteConfig> get routes => [
-        _i1.RouteConfig(LoginView.name,
-            path: '/', fullMatch: false, usesTabsRouter: false),
-        _i1.RouteConfig(DashboardView.name,
-            path: '/dashboard-view', fullMatch: false, usesTabsRouter: false)
+        _i1.RouteConfig(LoginView.name, path: '/'),
+        _i1.RouteConfig(DashboardView.name, path: '/dashboard-view')
       ];
 }
 

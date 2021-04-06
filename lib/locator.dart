@@ -1,9 +1,9 @@
-import 'package:get_it/get_it.dart';
-import 'package:injectable/injectable.dart';
+// import 'package:get_it/get_it.dart';
+// import 'package:injectable/injectable.dart';
 
-import 'locator.config.dart';
+// import 'locator.config.dart';
 
-final locator = GetIt.instance;
+// final locator = GetIt.instance;
 
-@injectableInit
-void setupLocator() => $initGetIt(locator);
+// @injectableInit
+// void setupLocator() => $initGetIt(locator);

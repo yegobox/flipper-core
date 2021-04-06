@@ -33,13 +33,16 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  stacked_services: ^0.8.0-nullsafety
+  
   injectable: ^1.2.0
   http: ^0.13.0
   get_it: ^6.0.0
-  flipper_services:
-    path: 'packages/flipper_services'
+  # flipper_services:
+  #   path:
+  #     'packages/flipper_services'
+  flipper_chat:
+    path:
+      'packages/flipper_chat'
   flipper_dashboard:
     path: 'packages/flipper_dashboard'
   firebase_messaging: ^9.0.0
@@ -47,10 +50,51 @@ dependencies:
   firebase_core: ^1.0.1
   cloud_firestore: ^1.0.1
   camera: ^0.8.0
-  get_storage: ^2.0.1
   auto_route:
   awesome_notifications:
-  # bitsdojo_window: ^0.0.9
+  geolocator:
+  permission_handler:
+  built_value:
+  image_picker:
+  built_collection:
+  flutter_image_compress: 1.0.0-nullsafety
+  jiffy: 
+  expandable:
+  timezone: 0.7.0-nullsafety.0
+  cupertino_icons:
+  get_storage:
+  country_picker:
+  # pusher_beams: not available for null safe
+  # firebase_analytics: 
+  # flutter_uploader: not available
+  rxdart:
+  # loading: not available
+  firebase_crashlytics: 
+  logger:
+  async:
+  stacked: 
+  stacked_hooks:
+  stacked_services: 0.8.0-nullsafety.1
+  provider:
+  cached_network_image: 3.0.0-nullsafety
+  flutter_dotenv: 4.0.0-nullsafety.0
+  mailer:
+  # contacts_service: not available
+  connectivity:
+  # bluetooth_thermal_printer: not available
+  # firebase_remote_config: not available
+  # esc_pos_utils: not available
+  # pusher: not available
+  get: 4.0.0-nullsafety.2
+  flutter_slidable: 
+  in_app_review:
+  timeago:
+  cron:
+  number_display: ^3.0.0
+  # firebase_dynamic_links: not available
+  
+  bitsdojo_window: 
+  observable_ish:
 
 dev_dependencies:
   flutter_test:
@@ -67,31 +111,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware.
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/assets-and-images/#from-packages
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+    - assets/images/
+    - assets/icons/
   # flutter run
   # flutter create --template=package hello
   # ./flutterw packages pub run build_runner build --delete-conflicting-outputs

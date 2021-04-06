@@ -1,4 +1,4 @@
-# flipper_services
+# flipper_chat
 
 A new Flutter package project.
 
