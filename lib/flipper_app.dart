@@ -1,16 +1,18 @@
-import 'package:flipper_login/login_view.dart';
+import 'package:flipper/routes.gr.dart';
 import 'package:flutter/material.dart';
 
 class FlipperApp extends StatelessWidget {
-  // This widget is the root of your application.
+  final _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginView(),
+      routerDelegate: _appRouter.delegate(),
+      routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }
