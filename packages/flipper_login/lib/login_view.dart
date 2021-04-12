@@ -22,7 +22,7 @@ class LoginView extends StatelessWidget {
             height: 200,
             child: Container(
               margin: EdgeInsets.only(left: 100.0, top: 15),
-              child: ListTile(
+              child: const ListTile(
                 leading: Icon(
                   Icons.view_agenda,
                   size: 50,
@@ -37,6 +37,7 @@ class LoginView extends StatelessWidget {
                 ),
               ),
             )),
+            
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -55,37 +56,37 @@ class LoginView extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               "To Use WhatsApp On Your Computer",
                               style:
                                   TextStyle(color: Colors.grey, fontSize: 18),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
-                            Text(
+                            const Text(
                               "1. Open WhatsApp on your phone",
                               style: TextStyle(color: Colors.grey),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
-                            Text(
+                            const Text(
                               "2. Tap Menu or Settings and select WhatsApp Web",
                               style: TextStyle(color: Colors.grey),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
-                            Text(
+                            const Text(
                               "3. Point your phone to this screen to capture the code",
                               style: TextStyle(color: Colors.grey),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 80,
                             ),
                             GestureDetector(
-                                child: Text("Need help to get started? ",
+                                child: const Text("Need help to get started? ",
                                     style: TextStyle(
                                         decoration: TextDecoration.none,
                                         color: Colors.blue)),
@@ -106,7 +107,7 @@ class LoginView extends StatelessWidget {
                               child: CheckboxListTile(
                                 controlAffinity:
                                     ListTileControlAffinity.leading,
-                                title: Text(
+                                title: const Text(
                                   'Keep me signed in',
                                   style: TextStyle(
                                       color: Colors.grey, fontSize: 13),
@@ -132,7 +133,7 @@ class LoginView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Container(
-                          child: Center(
+                          child: const Center(
                               child: Text("Footer Image Section"))),
                     ],
                   ))
@@ -158,7 +159,7 @@ class LoginView extends StatelessWidget {
                   width: 80,
                   height: 80,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3,
                 ),
                 Text(
@@ -166,7 +167,7 @@ class LoginView extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 26, color: Colors.blue[900]),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Text(
@@ -177,7 +178,7 @@ class LoginView extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Padding(
@@ -190,27 +191,27 @@ class LoginView extends StatelessWidget {
                     child: RaisedButton(
                       padding: EdgeInsets.all(15),
                       color: Colors.blue[900],
-                      child: Text(
+                      child: const Text(
                         "Create Account",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (context) => LoginPopupView(),
+                        );
+                      },
                     ),
-                    onPressed: () {
-                      showModalBottomSheet(
-                        context: context,
-                        builder: (context) => LoginPopupView(),
-                      );
-                    },
+
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   SizedBox(
                     width: double.infinity,
                     child: RaisedButton(
                       padding: EdgeInsets.all(15),
-                      child: Text(
+                      child: const Text(
                         "Sign In",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
