@@ -1,25 +1,39 @@
 import 'package:flipper/flipper_app.dart';
 // import 'package:flipper/locator.dart';
 import 'package:flutter/material.dart';
+import 'package:flipper_login/login_view.dart';
 
-void main() {
-  // setupLocator();
-  runApp(FlipperApp());
+import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:flipper/page/home_page.dart';
+import 'package:flipper/provider//theme_provider.dart';
+
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  static const String title = 'Light & Dark Theme';
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-            toggleableActiveColor: Colors.green
-        ),
-        home: Scaffold(
-          backgroundColor: Colors.grey[300],
-          body: LoginView(),
-        )
-    );
-  }
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    builder: (context, _) {
+      final themeProvider = Provider.of<ThemeProvider>(context);
+
+      return MaterialApp(
+        title: title,
+        themeMode: themeProvider.themeMode,
+        theme: MyThemes.lightTheme,
+        darkTheme: MyThemes.darkTheme,
+        home: HomePage(),
+      );
+    },
+  );
 }
