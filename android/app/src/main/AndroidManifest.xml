@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.flipper">
+    package="rw.flipper">
    <application
         android:label="flipper"
         android:icon="@mipmap/ic_launcher">
